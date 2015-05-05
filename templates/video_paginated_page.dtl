@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html ng-app="wildridgeApp">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Wildridge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""/>
+    <meta name="keywords" content="wildridge, public, video clips, post, videoblog, community site, videos, clips, online news, america news, news america"/>
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="http://vjs.zencdn.net/4.1/video-js.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script type='text/javascript' src="http://vjs.zencdn.net/4.1/video.js"></script>
+    <script src="/js/ui-bootstrap-tpls-0.6.0.js"></script>
+  </head>
+  <body ng-controller="WildridgeVideoPage" ng-cloak>
+    <div class="container">
+      <header>
+        <span class="logo"><img src="/images/logo.png"/></span>
+        <div class="right">
+          <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=557677&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=213288">
+          </script><noscript><a href='http://delivery.b.switchadhub.com/adserver/www/delivery/ck.php?n=a81bd319&amp;cb=INSERT_RANDOM_NUMBER' target='_blank'><img src='http://delivery.b.switchadhub.com/adserver/www/delivery/avw.php?zoneid=863&amp;charset=UTF-8&amp;cb=INSERT_RANDOM_NUMBER&amp;n=a81bd319&amp;ct0=INSERT_CLICK_MACRO' border='0' alt='' /></a></noscript>
+        </div>
+      </header>
+      <!--Header End-->
+
+      <div class="navgation">
+        <nav>
+          <a href="/"><span>Now!</span></a>
+          <a href="/p/World?page=1"><span>World News</span></a>
+          <a href="/p/US?page=1"><span>US</span></a>
+          <a href="/p/Politics?page=1"><span>Politics</span></a>
+          <a href="/p/Entertainment?page=1"><span>Entertainment</span></a>
+          <a href="/p/Markets?page=1"><span>Markets</span></a>
+          <a href="/contactus"><span>Contact Us</span></a>
+          <a href="/p/Money?page=1"><span>Money</span></a>
+        </nav>
+        <div class="navright">
+          <a href="/"><img src="/images/home.png"/></a>
+          <a href="mailto:admin@wildridge.net"><img src="/images/email.png"/></a>
+        </div>
+      </div>
+      <!--Navgation End-->
+
+      <div class="banner">
+        <!-- BEGIN JS TAG - Wildrige.net_728x90 < - DO NOT MODIFY -->
+        <script src="http://ib.adnxs.com/ttj?id=1736949&referrer=wildridge.net"></script>
+        <!-- END TAG -->
+      </div>
+      <!--banner End-->
+
+      <article>
+        <aside class="width67">
+          <div class="module">
+            <div class="module-title">{% verbatim %}{{ latestVideo.value.title }}{% endverbatim %}</div>
+            <video-js></video-js>
+            <p> &nbsp; </p>
+            <br />
+            <span class="video-description">{% verbatim %}{{ latestVideo.value.description }}{% endverbatim %}</span>
+            <span class="uploaded-date"> </span>
+          </div>
+          <div class="clear"></div>
+          <div class="gallery-module">
+                <div class="featured-videos-title">More Videos</div>
+                <div>
+                  <div class="gallery" ng-repeat="vid in noneFeaturedVideos">
+                    <div class="videothumb">
+                      <a ng-href="/v/{% verbatim %}{{vid.value[0]}}{% endverbatim %}">
+                        <img width="100%" ng-src="http://img1.contentapi.ws/{% verbatim %}{{vid.value[2]}}{% endverbatim %}" alt="{% verbatim %}{{vid.value[1]}}{% endverbatim %}"/>
+                        <div class="video-overlay">
+                          <span class="uploadedDate">{% verbatim %}{{vid.value[5]}}{% endverbatim %}</span>
+                          <span class="duration">{% verbatim %}{{vid.value[3]}}{% endverbatim %}</span>
+                        </div>
+                        <img class="play" src="images/play-icon.png" alt="Play"/>
+                      </a>
+                    </div>
+                    <a class="video-title" ng-href="/v/{% verbatim %}{{vid.value[0]}}{% endverbatim %}">{% verbatim %}{{vid.value[1]}}{% endverbatim %}</a>
+                  </div>
+                </div>
+              </div>
+              <span class="clearboth"></span>
+              <span class="clearboth"></span>
+              <div class="row">
+                <pagination on-select-page="pageChanged(page)" items-per-page="videosPerPage" total-items="bigTotalItems" page="bigCurrentPage" max-size="maxSize" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+              </div>
+        </aside>
+        <aside class="width30 margin20_L">
+          <div class="rt-tpadd">
+            <!-- BEGIN JS TAG - Wildrige.net_300x250 < - DO NOT MODIFY -->
+            <script src="http://ib.adnxs.com/ttj?id=1736947&referrer=wildridge.net"></script>
+            <!-- END TAG -->
+          </div>
+          <div class="module margin20_T">
+
+          </div>
+          <!--Trending Videos End-->
+
+          
+          <div class="module twitterposts">
+            <div class="module-title"></div>
+          </div>
+
+          <div class="clear"></div>
+        </aside>
+      </article>
+      <!--Article End-->
+
+      <div class="banner">
+        <!-- BEGIN JS TAG - Wildrige.net_728x90 < - DO NOT MODIFY -->
+        <script src="http://ib.adnxs.com/ttj?id=1736949&referrer=wildridge.net"></script>
+        <!-- END TAG -->
+      </div>
+      <!--Bottom-add End-->
+
+      <summary>
+        <span class="left">
+          Copyright &copy;  {% verbatim %}{{currentYear}}{% endverbatim %}  Wildridge. All Rights Reserved |
+          | <a href=/termsandconditions>Terms & Conditions</a>
+        </span>
+        <span class="right">
+          <a href="https://twitter.com/atameynews"><img src="/images/twitter.png"/></a>
+          <a href="https://www.facebook.com/pages/Atameycom/209130765925556"><img src="/images/facebook.png"/></a>
+        </span>
+      </summary>
+      <!--Footer End-->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Atamey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""/>
+    <meta name="keywords" content="wildridge, public, video clips, post, videoblog, community site, videos, clips, online news, america news, news america"/>
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/bjqs.css"/>
+    <link rel="stylesheet" type="text/css" href="http://vjs.zencdn.net/4.1/video-js.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!--<script src="/js/angular.min.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script type='text/javascript' src="http://vjs.zencdn.net/4.1/video.js"></script>
+    <script src="/js/ui-bootstrap-tpls-0.6.0.js"></script>-->
+    <script src="/js/bjqs-1.3.min.js"></script>
+    <script type='text/javascript' src='/js/jquery-1.7.1.min.js'></script>
+    
+    <script src="/js/play_video.js"></script>
+    <script type="text/javascript" src="http://jwpsrv.com/library/5V3tOP97EeK2SxIxOUCPzg.js"></script>
+<script type="text/javascript">jwplayer.key="L0SAYMTJJs/IIkeci5tG4vgIMGHAc6YFBtmJaA==";</script></script>     
+    <script type='text/javascript' src='/js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.easing.1.3.js'></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <span class="logo"><a href="/" title="Atamey"><img src="/images/logo.png"/></a></span>
+        <div class="right">
+          <script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=557677&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=213288">
+          </script><noscript><a href='http://delivery.b.switchadhub.com/adserver/www/delivery/ck.php?n=a81bd319&amp;cb=INSERT_RANDOM_NUMBER' target='_blank'><img src='http://delivery.b.switchadhub.com/adserver/www/delivery/avw.php?zoneid=863&amp;charset=UTF-8&amp;cb=INSERT_RANDOM_NUMBER&amp;n=a81bd319&amp;ct0=INSERT_CLICK_MACRO' border='0' alt='' /></a></noscript>
+        </div>
+      </header>
+      <!--Header End-->
+
+      <div class="navgation">
+        <nav> 
+          <a href="/"><span>Now!</span></a>
+          {%  ifequal category "World" %}
+            <a href="/p/World?page=1" class="active"><span>World News</span></a>
+            <a href="/p/US?page=1"><span>US</span></a>
+            <a href="/p/Politics?page=1"><span>Politics</span></a>
+            <a href="/p/Entertainment?page=1"><span>Entertainment</span></a>
+            <a href="/p/Markets?page=1"><span>Markets</span></a>
+            <a href="/contactus"><span>Contact Us</span></a>
+            <a href="/p/Money?page=1"><span>Money</span></a>
+            <a href="/morevideos?page=1"><span>World Videos</span></a>
+          {% endifequal %}
+          {%  ifequal category "US" %}
+            <a href="/p/World?page=1"><span>World News</span></a>
+            <a href="/p/US?page=1" class="active"><span>US</span></a>
+            <a href="/p/Politics?page=1"><span>Politics</span></a>
+            <a href="/p/Entertainment?page=1"><span>Entertainment</span></a>
+            <a href="/p/Markets?page=1"><span>Markets</span></a>
+            <a href="/p/Money?page=1"><span>Money</span></a>
+            <a href="/morevideos?page=1"><span>World Videos</span></a>
+          {% endifequal %}
+          {%  ifequal category "Politics" %}
+            <a href="/p/World?page=1"><span>World News</span></a>
+            <a href="/p/US?page=1"><span>US</span></a>
+            <a href="/p/Politics?page=1" class="active"><span>Politics</span></a>
+            <a href="/p/Entertainment?page=1"><span>Entertainment</span></a>
+            <a href="/p/Markets?page=1"><span>Markets</span></a>
+            <a href="/p/Money?page=1"><span>Money</span></a>
+            <a href="/morevideos?page=1"><span>World Videos</span></a>
+          {% endifequal %}
+          {%  ifequal category "Entertainment" %}
+            <a href="/p/World?page=1"><span>World News</span></a>
+            <a href="/p/US?page=1"><span>US</span></a>
+            <a href="/p/Politics?page=1" ><span>Politics</span></a>
+            <a href="/p/Entertainment?page=1" class="active"><span>Entertainment</span></a>
+            <a href="/p/Markets?page=1"><span>Markets</span></a>
+            <a href="/p/Money?page=1"><span>Money</span></a>
+            <a href="/morevideos?page=1"><span>World Videos</span></a>
+          {% endifequal %}
+          {%  ifequal category "Markets" %}
+            <a href="/World?page=1"><span>World News</span></a>
+            <a href="/p/US?page=1"><span>US</span></a>
+            <a href="/p/Politics?page=1" ><span>Politics</span></a>
+            <a href="/p/Entertainment?page=1"><span>Entertainment</span></a>
+            <a href="/p/Markets?page=1" class="active"><span>Markets</span></a>
+            <a href="/p/Money?page=1"><span>Money</span></a>
+            <a href="/morevideos?page=1"><span>World Videos</span></a>
+          {% endifequal %}
+          {%  ifequal category "Money" %}
+            <a href="/World?page=1"><span>World News</span></a>
+            <a href="/p/US?page=1"><span>US</span></a>
+            <a href="/p/Politics?page=1" ><span>Politics</span></a>
+            <a href="/p/Entertainment?page=1"><span>Entertainment</span></a>
+            <a href="/p/Markets?page=1"><span>Markets</span></a>
+            <a href="/p/Money?page=1" class="active"><span>Money</span></a>
+            <a href="/morevideos?page=1"><span>World Videos</span></a>
+          {% endifequal %}
+          
+        </nav>
+        <div class="navright">
+          <a href="/"><img src="/images/home.png"/></a>
+          <a href="mailto:admin@atamey.net"><img src="/images/email.png"/></a>
+        </div>
+      </div>
+      <!--Navgation End-->
+
+      <div class="banner">
+        
+      </div>
+      <!--banner End-->
+
+      <article>
+        <aside class="width67">
+        <div class="slideshow1">        
+                  <input type="hidden" name="video_val" id="video_val" value="{{ videoParam.video }}" />
+                  <div class="video-stream">                  
+                    <div id="myElement">Loading the player...</div> 
+                    <div class="mainvideo-title"><h2 class="videotitle">
+                    {{ videoParam.title }} <span style="color:#FF9900;"> - 
+                    {{ videoParam.upload_date }}</span></h2> </div>             
+                  </div>          
+              </div>
+          <div class="module" ng-controller="WildridgeNewsPagination">
+            <div class="module-inner">
+              {% for t in titles %}
+                <div class="row devider" >
+                  <a href="/n/{{ t.id }}">{{ t.description }}</a><span class="uploaded-date"> {{ t.upload_date}}</span>
+                </div>
+              {% endfor %}
+              <!-- <div class="row">
+                <pagination on-select-page="pageChanged(page)" items-per-page="newsPerPage" total-items="bigTotalItems" page="bigCurrentPage" max-size="maxSize" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+              </div> -->
+            </div>
+          </div>
+
+
+        </aside>
+        <aside class="width30 margin20_L">
+          <div class="rt-tpadd">
+            <!--/* Switch v3.8.5 - Wildridge.net - Wildridge.net - 300x250 - 300x250 */-->
+
+            <script type='text/javascript'><!--//<![CDATA[
+               document.MAX_ct0 ='INSERT_CLICK_MACRO';
+
+               var m3_u = (location.protocol=='https:'?'https://delivery.b.switchadhub.com/adserver/www/delivery/ajs.php':'http://delivery.b.switchadhub.com/adserver/www/delivery/ajs.php');
+               var m3_r = Math.floor(Math.random()*99999999999);
+               if (!document.MAX_used) document.MAX_used = ',';
+               document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+               document.write ("?zoneid=862&amp;charset=UTF-8");
+               document.write ('&amp;cb=' + m3_r);
+               if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+               document.write ('&amp;charset=UTF-8');
+               document.write ("&amp;loc=" + escape(window.location));
+               document.write ("&amp;tzo=" + (new Date().getTimezoneOffset()));
+               if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+               if (document.context) document.write ("&context=" + escape(document.context));
+               if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+                   document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+               }
+               if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+               document.write ("'><\/scr"+"ipt>");
+            //]]>--></script><noscript><a href='http://delivery.b.switchadhub.com/adserver/www/delivery/ck.php?n=ac2e78b8&amp;cb=INSERT_RANDOM_NUMBER' target='_blank'><img src='http://delivery.b.switchadhub.com/adserver/www/delivery/avw.php?zoneid=862&amp;charset=UTF-8&amp;cb=INSERT_RANDOM_NUMBER&amp;n=ac2e78b8&amp;ct0=INSERT_CLICK_MACRO' border='0' alt='' /></a></noscript>
+          </div>
+          <div class="module margin20_T">
+            <div class="module-title">News in Pictures</div>
+            <div class="module-inner">
+              {% for n in politicsnews %}
+                <div class="graphic-gallery" style="width:100%">
+                  <div class="gallery-thumb">
+                    <img src="http://img1.contentapi.ws/{{ n.thumb_image }}"/>
+                  </div>
+                  <p class="gallery-desc">{{ n.title }}</p> <span class="uploaded-date"> {{ n.upload_date }}</span>
+                </div>
+              {% endfor %}
+              <span class="clearboth"></span>              
+            </div>
+          </div>
+          <!--Trending Videos End-->
+
+          <div class="rt-btadd margin20_T">
+            <!--/* Switch v3.8.5 - Wildridge.net - Wildridge.net - 300x250 - 300x250 */-->
+
+            <script type='text/javascript'><!--//<![CDATA[
+               document.MAX_ct0 ='INSERT_CLICK_MACRO';
+
+               var m3_u = (location.protocol=='https:'?'https://delivery.b.switchadhub.com/adserver/www/delivery/ajs.php':'http://delivery.b.switchadhub.com/adserver/www/delivery/ajs.php');
+               var m3_r = Math.floor(Math.random()*99999999999);
+               if (!document.MAX_used) document.MAX_used = ',';
+               document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+               document.write ("?zoneid=862&amp;charset=UTF-8");
+               document.write ('&amp;cb=' + m3_r);
+               if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+               document.write ('&amp;charset=UTF-8');
+               document.write ("&amp;loc=" + escape(window.location));
+               document.write ("&amp;tzo=" + (new Date().getTimezoneOffset()));
+               if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+               if (document.context) document.write ("&context=" + escape(document.context));
+               if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+                   document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+               }
+               if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+               document.write ("'><\/scr"+"ipt>");
+            //]]>--></script><noscript><a href='http://delivery.b.switchadhub.com/adserver/www/delivery/ck.php?n=ac2e78b8&amp;cb=INSERT_RANDOM_NUMBER' target='_blank'><img src='http://delivery.b.switchadhub.com/adserver/www/delivery/avw.php?zoneid=862&amp;charset=UTF-8&amp;cb=INSERT_RANDOM_NUMBER&amp;n=ac2e78b8&amp;ct0=INSERT_CLICK_MACRO' border='0' alt='' /></a></noscript>
+          </div>
+          <div class="module twitterposts">
+            <div class="module-title"></div>
+          </div>
+
+          <div class="clear"></div>
+        </aside>
+      </article>
+      <!--Article End-->
+
+      <div class="banner">
+        <script type='text/javascript'><!--//<![CDATA[
+       document.MAX_ct0 ='INSERT_CLICK_MACRO';
+
+       var m3_u = (location.protocol=='https:'?'https://delivery.b.switchadhub.com/adserver/www/delivery/ajs.php':'http://delivery.b.switchadhub.com/adserver/www/delivery/ajs.php');
+       var m3_r = Math.floor(Math.random()*99999999999);
+       if (!document.MAX_used) document.MAX_used = ',';
+       document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+       document.write ("?zoneid=863&amp;charset=UTF-8");
+       document.write ('&amp;cb=' + m3_r);
+       if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+       document.write ('&amp;charset=UTF-8');
+       document.write ("&amp;loc=" + escape(window.location));
+       document.write ("&amp;tzo=" + (new Date().getTimezoneOffset()));
+       if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+       if (document.context) document.write ("&context=" + escape(document.context));
+       if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+           document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+       }
+       if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+       document.write ("'><\/scr"+"ipt>");
+    //]]>--></script><noscript><a href='http://delivery.b.switchadhub.com/adserver/www/delivery/ck.php?n=a81bd319&amp;cb=INSERT_RANDOM_NUMBER' target='_blank'><img src='http://delivery.b.switchadhub.com/adserver/www/delivery/avw.php?zoneid=863&amp;charset=UTF-8&amp;cb=INSERT_RANDOM_NUMBER&amp;n=a81bd319&amp;ct0=INSERT_CLICK_MACRO' border='0' alt='' /></a></noscript>
+      </div>
+      <!--Bottom-add End-->
+
+      <summary>
+        <span class="left">
+          Copyright &copy;  {% now "Y" %}  Atamey All Rights Reserved | <a href=/termsandconditions>Terms & Conditions</a>
+        </span>
+        <span class="right">
+          <a href="https://twitter.com/atameynews" target="_blank"><img src="/images/twitter.png"/></a>
+          <a href="https://www.facebook.com/pages/Atameycom/209130765925556" target="_blank"><img src="/images/facebook.png"/></a>
+        </span>
+      </summary>
+      <!--Footer End-->
+    </div>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-43119651-6', 'atamey.com');
+        ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>
