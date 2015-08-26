@@ -68,7 +68,7 @@
                   <div class="gallery" ng-repeat="vid in noneFeaturedVideos">
                     <div class="videothumb">
                       <a ng-href="/v/{% verbatim %}{{vid.value[0]}}{% endverbatim %}">
-                        <img width="100%" ng-src="http://img1.contentapi.ws/{% verbatim %}{{vid.value[2]}}{% endverbatim %}" alt="{% verbatim %}{{vid.value[1]}}{% endverbatim %}"/>
+                        <img width="100%" ng-src="http://newscdn.lycos.com/world_news/{% verbatim %}{{vid.value[2]}}{% endverbatim %}" alt="{% verbatim %}{{vid.value[1]}}{% endverbatim %}"/>
                         <div class="video-overlay">
                           <span class="uploadedDate">{% verbatim %}{{vid.value[5]}}{% endverbatim %}</span>
                           <span class="duration">{% verbatim %}{{vid.value[3]}}{% endverbatim %}</span>
