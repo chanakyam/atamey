@@ -142,7 +142,7 @@
 							{% for n in politicsnews %}
 								<div class="graphic-gallery" style="width:100%">
 									<div class="gallery-thumb">
-										<img src="http://img1.contentapi.ws/{{ n.thumb_image }}"/>
+										<img src="http://newscdn.lycos.com/{{ n.thumb_image }}"/>
 									</div>
 									<p class="gallery-desc">{{ n.title }}</p> <span class="uploaded-date"> {{ n.upload_date }}</span>
 								</div>
