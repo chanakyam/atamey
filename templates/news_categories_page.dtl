@@ -76,7 +76,7 @@
             <a href="/morevideos?page=1"><span>World Videos</span></a>
           {% endifequal %}
           {%  ifequal category "Markets" %}
-            <a href="/World?page=1"><span>World News</span></a>
+            <a href="/p/World?page=1"><span>World News</span></a>
             <a href="/p/US?page=1"><span>US</span></a>
             <a href="/p/Politics?page=1" ><span>Politics</span></a>
             <a href="/p/Entertainment?page=1"><span>Entertainment</span></a>
@@ -85,7 +85,7 @@
             <a href="/morevideos?page=1"><span>World Videos</span></a>
           {% endifequal %}
           {%  ifequal category "Money" %}
-            <a href="/World?page=1"><span>World News</span></a>
+            <a href="/p/World?page=1"><span>World News</span></a>
             <a href="/p/US?page=1"><span>US</span></a>
             <a href="/p/Politics?page=1" ><span>Politics</span></a>
             <a href="/p/Entertainment?page=1"><span>Entertainment</span></a>
@@ -165,7 +165,7 @@
               {% for n in politicsnews %}
                 <div class="graphic-gallery" style="width:100%">
                   <div class="gallery-thumb">
-                    <img src="http://img1.contentapi.ws/{{ n.thumb_image }}"/>
+                    <img src="http://newscdn.lycos.com/{{ n.thumb_image }}"/>
                   </div>
                   <p class="gallery-desc">{{ n.title }}</p> <span class="uploaded-date"> {{ n.upload_date }}</span>
                 </div>
