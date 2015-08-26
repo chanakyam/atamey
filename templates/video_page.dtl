@@ -63,8 +63,8 @@
           <div class="module">
             <div class="module-title">{{ title }}</div>
             <video id="my_video_1" class="video-js vjs-default-skin" controls
-                        preload="auto" width="636" height="359" poster="http://img1.contentapi.ws/{{ thumbs_path }}" data-setup='{}'>
-              <source src="http://video.contentapi.ws/{{ video_path }}" type='video/mp4' />
+                        preload="auto" width="636" height="359" poster="http://newscdn.lycos.com/world_news/{{ thumbs_path }}" data-setup='{}'>
+              <source src="http://newscdn.lycos.com/world_news/{{ video_path }}" type='video/mp4' />
             </video>  
             <p> &nbsp; </p>
             <br />
@@ -81,7 +81,7 @@
                   <div class="gallery" ng-repeat="vid in noneFeaturedVideos">
                     <div class="videothumb">
                       <a ng-href="/v/{% verbatim %}{{vid.value[0]}}{% endverbatim %}">
-                        <img width="100%" ng-src="http://img1.contentapi.ws/{% verbatim %}{{vid.value[2]}}{% endverbatim %}" alt="{% verbatim %}{{vid.value[1]}}{% endverbatim %}"/>
+                        <img width="100%" ng-src="http://newscdn.lycos.com/world_news/{% verbatim %}{{vid.value[2]}}{% endverbatim %}" alt="{% verbatim %}{{vid.value[1]}}{% endverbatim %}"/>
                         <div class="video-overlay">
                           <span class="uploadedDate">{% verbatim %}{{vid.value[5]}}{% endverbatim %}</span>
                           <span class="duration">{% verbatim %}{{vid.value[3]}}{% endverbatim %}</span>
